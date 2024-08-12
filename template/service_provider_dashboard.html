@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Dashboard - No Q</title>
+    <link rel="stylesheet" href="service_provider_dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <h1>Welcome, <span id="service-name">Service Provider</span></h1>
+            <button class="logout-button">Logout</button>
+        </header>
+
+        <main>
+            <section class="service-info">
+                <h2>Service Information</h2>
+                <form id="service-info-form">
+                    <label for="service-name-input">Service Name:</label>
+                    <input type="text" id="service-name-input" value="Barber Shop">
+
+                    <label for="service-description">Service Description:</label>
+                    <textarea id="service-description">Haircuts and grooming services</textarea>
+
+                    <label for="service-contact">Contact Information:</label>
+                    <input type="text" id="service-contact" value="contact@barbershop.com">
+
+                    <label for="service-address">Service Address:</label>
+                    <input type="text" id="service-address" value="123 Main Street, City, Country">
+
+                    <button type="submit">Update Information</button>
+                </form>
+            </section>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <div class="review-list" id="review-list">
+                    <!-- Reviews will be dynamically added here -->
+                </div>
+            </section>
+
+            <section class="update-slots">
+                <h2>Update Available Slots & Timing</h2>
+                <form id="slots-form">
+                    <label for="slot-date">Select Date:</label>
+                    <input type="date" id="slot-date">
+
+                    <label for="slot-time">Select Time:</label>
+                    <input type="time" id="slot-time">
+
+                    <button type="submit">Add Slot</button>
+                </form>
+
+                <h3>Current Slots</h3>
+                <div class="slots-list" id="slots-list">
+                    <!-- Available slots will be dynamically added here -->
+                </div>
+            </section>
+
+            <section class="booking-stats">
+                <h2>Booking Statistics</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Total Bookings</h3>
+                        <p id="total-bookings">150</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Upcoming Bookings</h3>
+                        <p id="upcoming-bookings">10</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completed Bookings</h3>
+                        <p id="completed-bookings">140</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="service_provider_dashboard.js"></script>
+</body>
+</html>

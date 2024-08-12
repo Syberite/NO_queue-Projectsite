@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - No Q</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>No Q Admin</h2>
+            </div>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#manage-users">Manage Users</a></li>
+                <li><a href="#manage-services">Manage Services</a></li>
+                <li><a href="#manage-reviews">Manage Reviews</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header>
+                <h1>Admin Dashboard</h1>
+                <button class="logout-button">Logout</button>
+            </header>
+
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <p id="total-users">100</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Services</h3>
+                        <p id="total-services">50</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Reviews</h3>
+                        <p id="total-reviews">200</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="manage-users">
+                <h2>Manage Users</h2>
+                <button class="add-button" onclick="addUser()">Add User</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table">
+                        <!-- User rows will be added here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="manage-services">
+                <h2>Manage Services</h2>
+                <button class="add-button" onclick="addService()">Add Service</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="service-table">
+                        <!-- Service rows will be added here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="manage-reviews">
+                <h2>Manage Reviews</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Service</th>
+                            <th>Review</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="review-table">
+                        <!-- Review rows will be added here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="analytics">
+                <h2>Analytics</h2>
+                <div class="analytics-charts">
+                    <!-- Charts will be added here -->
+                </div>
+            </section>
+
+            <section id="settings">
+                <h2>Settings</h2>
+                <form id="settings-form">
+                    <label for="admin-email">Admin Email</label>
+                    <input type="email" id="admin-email" placeholder="Admin Email">
+                    <label for="admin-password">Admin Password</label>
+                    <input type="password" id="admin-password" placeholder="Admin Password">
+                    <button type="submit">Save Settings</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
