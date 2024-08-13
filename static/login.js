@@ -15,13 +15,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // For example, you can redirect users based on their userType
         if (userType === 'client') {
             // Redirect to client dashboard
-            window.location.href = 'client_dashboard.html';
+            window.location.href = "{{ url_for('client_dashboard')}}";
         } else if (userType === 'serviceProvider') {
             // Redirect to service provider dashboard
-            window.location.href = 'service_provider_dashboard.html';
+            window.location.href = "{{ url_for('service_provider_dashboard')}}";
         } else if (userType === 'admin') {
             // Redirect to admin dashboard
-            window.location.href = 'admin.html';
+            window.location.href = "{{ url_for('admin')}}";
         }
     } else {
         errorMessage.textContent = 'Please fill in all fields.';
